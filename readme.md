@@ -8,7 +8,7 @@ This is a quiz that is made by javascript
 ## Usage
 When you first open 
 
-<img width="1461" alt="Screenshot 2023-01-25 at 7 35 36 PM" src="https://user-images.githubusercontent.com/103465115/214747527-35783b3b-9214-4867-9369-668bdf4dd1d6.png">
+<img width="400" alt="Screenshot 2023-01-25 at 7 34 45 PM" src="https://user-images.githubusercontent.com/103465115/214750742-b6432206-5529-4319-8c2c-bd73190a4a9a.png">
 
 First Question 
 
@@ -30,5 +30,7 @@ After the quiz is done
 Once intials added 
 
 <img width="400" alt="Screenshot 2023-01-25 at 7 35 56 PM" src="https://user-images.githubusercontent.com/103465115/214748443-da770432-b36a-4805-a335-0fa932262f84.png">
+
 ## License
+
 N/A
