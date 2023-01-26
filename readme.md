@@ -4,7 +4,7 @@
 This is a quiz that is made by javascript, Html , and css. This is also a responsive webapp because there are many things that edit the dom such ad the button tha are added for each question. The reason for this type of quiz beacuse I want a place that I can update to test myself. The ultimate goal for this webapp is for one day to come back be able to add more questions to test myself on future topics that I am stuck on. There are five questions on this quiz and they are all about javascript, once you start the quiz you have 90 seconds to complete it, and when you get a correct answer you get prompted to next question, if you get it wrong it will show you which one is the right one but you will also lose some time. Once you finish the quiz it will prompt you to enter you initals to put in the highscore tab.
 
 ## link
-
+https://axeli12.github.io/week4-quiz/
 ## Usage
 When you first open 
 
