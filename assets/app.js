@@ -45,12 +45,12 @@ var answerCheck = document.getElementById("answerCheck");
 var summary = document.getElementById("summary");
 var submitBtn = document.getElementById("submitBtn");
 var initialsIn = document.getElementById("initialsIn");
-var bigDiv = document.getElementById("mainDiv");
+var mainDiv = document.getElementById("mainDiv");
 
-var hsDiv = document.getElementById("highScored");
+var highScored = document.getElementById("highScored");
 var score = document.getElementById("FinalScore");
 
-var backBtn = document.getElementById("goBackBtn");
+var goBackBtn = document.getElementById("goBackBtn");
 var clearBtn = document.getElementById("clearBtn"); 
 var viewHighscore = document.getElementById("viewHighscore");
 var listHighscores = document.getElementById("listHighscores");
@@ -114,11 +114,11 @@ function checkAnswer(answer) {
 
   if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
       rightAns++;
-      answerCheck.textContent = "You got it";
+      answerCheck.textContent = "Correct!";
   } else {
       totalTime -= 10;
       timeLeft.textContent = totalTime;
-      answerCheck.textContent = "WRONG LOL, LOSER -- " + questions[questionIndex].answer;
+      answerCheck.textContent = "Incorrect The answer is: " + questions[questionIndex].answer;
   }
 
   questionIndex++;
@@ -151,7 +151,7 @@ function showScores() {
     questionDiv.style.display = "none";
     timesUp.style.display = "none";
     summary.style.display = "none";
-    hsDiv.style.display = "block";
+    highScored.style.display = "block";
    
     var savedScores = localStorage.getItem("highscores");
    
@@ -180,7 +180,7 @@ function storeHighScores() {
     timer.style.display = "none";
     timesUp.style.display = "none";
     summary.style.display = "none";
-    hsDiv.style.display = "block";   
+    highScored.style.display = "block";   
   
     var savedScores = localStorage.getItem("highscores");
     var scoresArray;
@@ -213,9 +213,9 @@ viewHighscore.addEventListener("click", function(event) {
   showScores(event);
 });
 
-backBtn.addEventListener("click", function() {
+goBackBtn.addEventListener("click", function() {
   startDiv.style.display = "block";
-  hsDiv.style.display = "none";
+  highScored.style.display = "none";
 });
 
 clearBtn.addEventListener("click", function(){
