@@ -50,6 +50,7 @@ body {
   
   .answerBtn {
     font-size: 3px;
+    justify-content: flex-start;
     
   }
   

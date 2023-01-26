@@ -66,7 +66,7 @@ startQuizBtn.addEventListener("click", newQuiz);
 
 function newQuiz() {
   questionIndex = 0;
-  totalTime = 40;
+  totalTime = 90;
   timeLeft.textContent = totalTime;
   initialsIn.textContent = "";
   rightAns = 0;
@@ -172,7 +172,7 @@ function showScores() {
 function storeHighScores() {
     
     if (initialsIn.value === "") {
-        alert("C'mon, you have to type something.");
+        alert("Please Enter your Intials");
         return;
     } 
   
