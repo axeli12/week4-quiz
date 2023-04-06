@@ -40,9 +40,9 @@ body {
     text-align: center;
   }
   
-  .questionDiv {
-    justify-content: left;
-  }
+  /* .questionDiv {
+    justify-content: center;
+  } */
   
   #questionTitle {
     text-align: center;
@@ -93,4 +93,18 @@ body {
   #answerCheck {
     font-style: italic;
     color: #4D5159;
+  }
+
+  #highScored{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  #questionDiv{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
   }
