@@ -1,64 +1,64 @@
 const questions = [
     {
-        question: "Inside which HTML element do we put the JavaScript?",
-        choices: ["a. <js>", "b. <javascript>", "c. <scripting>", "d. <script>"],
-        answer: "d. <script>"
+        question: "What is javascript mainly for?",
+        choices: ["a. functionality ", "b. coding", "c. writing",],
+        answer: "a. functionality"
     },
     {
-        question: "String values must be enclosed within _____ when being assigned to variables.",
-        choices: ["a. commas", "b. curly brackets", "c. quotes", "d. parenthesis"],
-        answer: "c. quotes"
+        question: "Which one isnt a javascript mehtod",
+        choices: ["a. string", "b. dot notation", "c. alert", "d. boolean"],
+        answer: "c. alert"
     },
     {
-        question: "Arrays in JavaScript can be used to store _____.",
-        choices: ["a. numbers and strings", "b. other arrays", "c. booleans", "d. all of the above"],
-        answer: "b. other arrays"
+        question: "What are some array methods",
+        choices: ["a. sort", "b. map", "c. filter", "d. all of the above"],
+        answer: "d. all of the above"
     },
     {
-        question: "Commonly used data types DO NOT include:",
-        choices: ["a. strings", "b. booleans", "c. alerts", "d. numbers"],
-        answer: "c. alerts"
+        question: "what does css do",
+        choices: ["a. styling", "b. formating", "c. alerts", "d. shaping"],
+        answer: "a. styling"
     },
     {
-        question: "How do you create a function in JavaScript",
-        choices: ["a. function = myFunction()", "b. function myFunction()", "c. function:myFunction()", "d. createMyFunction()"],
-        answer: "b. function myFunction()"
+        question: "what can be stored in an array",
+        choices: ["a. strings", "b. arrays", "c. booleans", "d. all of above"],
+        answer: "d. all of above"
     }
 ];
 
 
-var timer = document.getElementById("timer");
-var timeLeft = document.getElementById("timeLeft");
-var timesUp = document.getElementById("timesUp");
+let timer = document.getElementById("timer");
+let timeLeft = document.getElementById("timeLeft");
+let timesUp = document.getElementById("timesUp");
 
-var startDiv = document.getElementById("start");
-var startQuizBtn = document.getElementById("startBtn");
+let startDiv = document.getElementById("start");
+let startQuizBtn = document.getElementById("startBtn");
 
-var questionDiv = document.getElementById("questionDiv");
-var questionTitle = document.getElementById("questionTitle");
-var choice1 = document.getElementById("btn0");
-var choice2 = document.getElementById("btn1");
-var choice3 = document.getElementById("btn2");
-var choice4 = document.getElementById("btn3");
-var answerCheck = document.getElementById("answerCheck");
+let questionDiv = document.getElementById("questionDiv");
+let questionTitle = document.getElementById("questionTitle");
+let choice1 = document.getElementById("btn0");
+let choice2 = document.getElementById("btn1");
+let choice3 = document.getElementById("btn2");
+let choice4 = document.getElementById("btn3");
+let answerCheck = document.getElementById("answerCheck");
 
-var summary = document.getElementById("summary");
-var submitBtn = document.getElementById("submitBtn");
-var initialsIn = document.getElementById("initialsIn");
-var mainDiv = document.getElementById("mainDiv");
+let summary = document.getElementById("summary");
+let submitBtn = document.getElementById("submitBtn");
+let initialsIn = document.getElementById("initialsIn");
+let mainDiv = document.getElementById("mainDiv");
 
-var highScored = document.getElementById("highScored");
-var score = document.getElementById("FinalScore");
+let highScored = document.getElementById("highScored");
+let score = document.getElementById("FinalScore");
 
-var goBackBtn = document.getElementById("goBackBtn");
-var clearBtn = document.getElementById("clearBtn"); 
-var viewHighscore = document.getElementById("viewHighscore");
-var listHighscores = document.getElementById("listHighscores");
+let goBackBtn = document.getElementById("goBackBtn");
+let clearBtn = document.getElementById("clearBtn"); 
+let viewHighscore = document.getElementById("viewHighscore");
+let listHighscores = document.getElementById("listHighscores");
 
-var rightAns = 0;
-var questionNum = 0;
-var scoreResult = 0;
-var questionIndex = 0;
+let rightAns = 0;
+let questionNum = 0;
+let scoreResult = 0;
+let questionIndex = 0;
 
 
 
@@ -66,7 +66,7 @@ startQuizBtn.addEventListener("click", newQuiz);
 
 function newQuiz() {
   questionIndex = 0;
-  totalTime = 90;
+  totalTime = 110;
   timeLeft.textContent = totalTime;
   initialsIn.textContent = "";
   rightAns = 0;
@@ -75,7 +75,7 @@ function newQuiz() {
   questionDiv.style.display = "block";
   timesUp.style.display = "none";
 
-  var startTimer = setInterval(function() {
+  let startTimer = setInterval(function() {
       totalTime--;
       timeLeft.textContent = totalTime;
       if(totalTime <= 0) {
@@ -108,7 +108,7 @@ function nextQuestion() {
 
 function checkAnswer(answer) {
 
-  var lineBreak = document.getElementById("lineBreak");
+  let lineBreak = document.getElementById("lineBreak");
   lineBreak.style.display = "block";
   answerCheck.style.display = "block";
 
@@ -153,17 +153,17 @@ function showScores() {
     summary.style.display = "none";
     highScored.style.display = "block";
    
-    var savedScores = localStorage.getItem("highscores");
+    let savedScores = localStorage.getItem("highscores");
    
     
     if (savedScores === "") {
         return;
     }
         
-    var storedHighScores = JSON.parse(savedScores);
-    var newHighscore = [];
+    let storedHighScores = JSON.parse(savedScores);
+    let newHighscore = [];
     for (let i = 0; i < storedHighScores.length; i++) {
-        var newHighscore = document.createElement("p");
+        let newHighscore = document.createElement("p");
         newHighscore.innerHTML = storedHighScores[i].initials + " : " + storedHighScores[i].score;
         listHighscores.appendChild(newHighscore);
     }
@@ -182,8 +182,8 @@ function storeHighScores() {
     summary.style.display = "none";
     highScored.style.display = "block";   
   
-    var savedScores = localStorage.getItem("highscores");
-    var scoresArray;
+    let savedScores = localStorage.getItem("highscores");
+    let scoresArray;
   
     if (savedScores === null) {
         scoresArray = [];
@@ -191,7 +191,7 @@ function storeHighScores() {
         scoresArray = JSON.parse(savedScores);
     }
   
-    var userScore = {
+    let userScore = {
         initials: initialsIn.value,
         score: rightAns
     };
@@ -199,7 +199,7 @@ function storeHighScores() {
     scoresArray.push(userScore);
     initialsIn.value = "";
     
-    var scoresArrayString = JSON.stringify(scoresArray);
+    let scoresArrayString = JSON.stringify(scoresArray);
     window.localStorage.setItem("highscores", scoresArrayString);
 
     showScores();
