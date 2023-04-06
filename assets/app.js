@@ -1,30 +1,4 @@
-const questions = [
-    {
-        question: "What is javascript mainly for?",
-        choices: ["a. functionality ", "b. coding", "c. writing",],
-        answer: "a. functionality"
-    },
-    {
-        question: "Which one isnt a javascript mehtod",
-        choices: ["a. string", "b. dot notation", "c. alert", "d. boolean"],
-        answer: "c. alert"
-    },
-    {
-        question: "What are some array methods",
-        choices: ["a. sort", "b. map", "c. filter", "d. all of the above"],
-        answer: "d. all of the above"
-    },
-    {
-        question: "what does css do",
-        choices: ["a. styling", "b. formating", "c. alerts", "d. shaping"],
-        answer: "a. styling"
-    },
-    {
-        question: "what can be stored in an array",
-        choices: ["a. strings", "b. arrays", "c. booleans", "d. all of above"],
-        answer: "d. all of above"
-    }
-];
+
 
 
 let timer = document.getElementById("timer");
